@@ -31,6 +31,9 @@ def on_release(key):
 
     kb.store_key(key)  # right now it stores the key press once you release it. weird i know. There's a better way to do this.
 
+    if key == keyboard.Key.enter:
+        kb.key_store.clear()    
+     
     if key == keyboard.Key.esc:
         # Stop listener
         return False
